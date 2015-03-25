@@ -1,6 +1,6 @@
 <?php namespace Spatie\Geocoder;
 
-interface Geocoder {
+interface GeocoderInterface {
 
     /**
      *
@@ -9,7 +9,5 @@ interface Geocoder {
      * @param string $query
      * @return array
      */
-    CONST RESULT_NOT_FOUND = 'NOT FOUND';
-
     public function getCoordinatesForQuery($query);
 }

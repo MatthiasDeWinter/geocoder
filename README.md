@@ -10,20 +10,14 @@ The package can convert any address to GPS coordinates.
 
 You can install this package through Composer.
 
-```js
-{
-    "require": {
-		"spatie/geocoder": "dev-master"
-	}
-}
+```bash
+composer requrie spatie/geocoder
 ```
 
 When using Laravel there is a service provider that you can make use of.
 
 ```php
-
 // app/config/app.php
-
 'providers' => [
     '...',
     'Spatie\Geocoder\GeocoderServiceProvider'
@@ -34,13 +28,11 @@ Geocoder also comes with a facade, which provides an easy way to call the Geocod
 
 
 ```php
-
 // app/config/app.php
-
-'aliases' => array(
-	...
+'aliases' => [
+	'...',
 	'Geocoder' => 'Spatie\Geocoder\GeocoderFacade',
-)
+];
 ```
 
 ## Usage

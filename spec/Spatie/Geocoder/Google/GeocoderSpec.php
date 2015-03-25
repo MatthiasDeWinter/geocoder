@@ -2,7 +2,7 @@
 
 namespace spec\Spatie\Geocoder\Google;
 
-use Guzzle\Service\Client;
+use GuzzleHttp\Client;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Spatie\Geocoder\Geocoder;
@@ -37,6 +37,6 @@ class GeocoderSpec extends ObjectBehavior
     {
         $callResult = $this->object->getCoordinatesForQuery('gibberishlocation');
         $callResult->shouldBeArray();
-        $callResult['accuracy']->shouldBe(Geocoder::RESULT_NOT_FOUND);
+        $callResult['accuracy']->shouldBe('ZERO_RESULTS WITH STATUSCODE 200');
     }
 }
