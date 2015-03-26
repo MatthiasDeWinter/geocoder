@@ -11,7 +11,7 @@ The package can convert any address to GPS coordinates.
 You can install this package through Composer.
 
 ```bash
-composer requrie spatie/geocoder
+composer require spatie/geocoder
 ```
 
 When using Laravel there is a service provider that you can make use of.
