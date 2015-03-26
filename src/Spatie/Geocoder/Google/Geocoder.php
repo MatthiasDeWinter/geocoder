@@ -114,7 +114,10 @@ class Geocoder implements GeocoderInterface
      */
     private function guardAgainstExternalErrors($response)
     {
-        if ($response->getStatusCode() != 200) {
+        // https://developers.google.com/analytics/devguides/reporting/core/v3/coreErrors ?
+
+        // != 200 => Every error | == 503 back-end error
+        if ($response->getStatusCode() == 503) {
             throw new \Exception('Could not connect to googleapis.com/maps/api. STATUSCODE = '.$response->getStatusCode());
         }
     }
